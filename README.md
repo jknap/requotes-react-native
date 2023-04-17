@@ -12,3 +12,14 @@ npx react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbu
 ![](https://github.com/jknap/requotes-react-native/blob/main/readme-assets/validate-a-dot-app-file-with-an-iOS-simulator.gif)
 
 # Build an Android emulator .apk in a React Native project
+1. Create the `assets` folder under `./android/app/src/main/`
+```bash
+mkdir android/app/src/main/assets
+```
+2. Generate the bundle file for android:
+```bash
+npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+```
+3. Launch Android Studio and open the project for your application (more specifically the `android` folder of you React Native project)
+4. Build the .apk file:
+![](https://github.com/jknap/requotes-react-native/blob/main/readme-assets/build-a-dot-apk-in-android-studio.png)
