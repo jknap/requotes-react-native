@@ -20,6 +20,13 @@ mkdir android/app/src/main/assets
 ```bash
 npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
 ```
-3. Launch Android Studio and open the project for your application (more specifically the `android` folder of your React Native project)
+3. Go to the `android` folder:
+```bash
+cd android
+```
 4. Build the .apk file:
-![](https://github.com/jknap/requotes-react-native/blob/main/readme-assets/build-a-dot-apk-file-in-android-studio.png)
+```bash
+./gradlew assembleDebug
+```
+5. Your .apk file will be located in `./android/app/build/outputs/apk/debug/app-debug.apk`. You can use an Android emulator to validate it.
+![](https://github.com/jknap/requotes-react-native/blob/main/readme-assets/validate-a-dot-apk-file-with-an-Android-emulator.gif)
